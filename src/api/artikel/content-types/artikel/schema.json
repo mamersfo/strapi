@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "artikelen",
+  "info": {
+    "singularName": "artikel",
+    "pluralName": "artikelen",
+    "displayName": "Artikel",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titel": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "inleiding": {
+      "type": "richtext"
+    },
+    "artikeltekst": {
+      "type": "richtext"
+    },
+    "datum": {
+      "type": "date",
+      "required": true
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "maxLength": 50,
+      "unique": true
+    },
+    "rubriek": {
+      "type": "enumeration",
+      "enum": [
+        "home",
+        "nieuws"
+      ],
+      "required": true,
+      "default": "nieuws"
+    }
+  }
+}
